@@ -7,16 +7,17 @@ const Adddata = () => {
     const [list, setlist] = useState([]);
     function handledata(){
         setlist([...list, data])
-        console.log(list)
+        // console.log(list)
+        
     }
     function removehandle(){
-        setdata(list.pop())
+        setdata(list.pop(0))
     }
 
     return (
         <>
             <div>
-                <TextField id="outlined-basic" label="Enter Data" variant="outlined" name='data' value={data} onChange={(e)=> setdata(e.target.value)} size='sm'   style={{width: '600px'}}/>
+                <TextField  label="Enter Data" variant="outlined" name='data' value={data} onChange={(e)=> setdata(e.target.value)} size='sm'   style={{width: '600px'}}/>
                 <Button variant="outlined" style={{width: '200px', height: '55px'}} onClick={handledata} >Submit</Button> 
             </div>
             <div style={{width: '800px', height:'400px', overflow: 'scroll'}}>
