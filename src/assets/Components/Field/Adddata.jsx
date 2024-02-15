@@ -22,7 +22,7 @@ const Adddata = () => {
             </div>
             <div style={{width: '800px', height:'400px', overflow: 'scroll'}}>
                 {
-                    list!= 0 && list.map((demo, i)=>{
+                    list!= [] && list.map((demo, i)=>{
                         return <p key={i} style={{width: '700px', backgroundColor: 'yellow', textAlign: 'start', padding: '20px'}}  >{demo}<DeleteOutlined style={{float: 'right'}} onClick={removehandle}/></p>
                     })
                 }
